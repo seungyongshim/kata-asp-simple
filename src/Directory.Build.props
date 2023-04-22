@@ -3,6 +3,8 @@
     <Copyright>Copyright © 2020-2021 </Copyright>
     <Authors>Seungyong Shim</Authors>
     <Version>9999.0.0.000</Version>
+    <Nullable>enable</Nullable>
+
     <PackageProjectUrl>https://github.com/seungyongshim/ModificationHere</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/seungyongshim/ModificationHere/blob/master/LICENSE</PackageLicenseUrl>
     <NoWarn>$(NoWarn);CS1591;xUnit1013</NoWarn>
@@ -13,6 +15,13 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <None Include="$(SolutionDir)..\icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LanguageExt.Core" Version="4.4.3" />
+    <Using Include="LanguageExt" />
+    <Using Include="LanguageExt.Prelude">
+      <Static>True</Static>
+    </Using>
   </ItemGroup>
   <PropertyGroup>
     <PackageIcon>icon.png</PackageIcon>

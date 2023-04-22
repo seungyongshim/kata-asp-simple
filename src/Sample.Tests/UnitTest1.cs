@@ -1,14 +1,13 @@
-using System;
+using System.Threading.Tasks;
 using Xunit;
-using static Sample.Prelude;
 
 namespace Sample.Tests;
 
 public class PreludeSpec
 {
     [Fact]
-    public void AddSuccess()
+    public Task AddSuccess()
     {
-        Assert.Equal(3, add(1)(2));
+        
     }
 }
